@@ -1,0 +1,83 @@
+//FORMAT
+//Question text INDEX [Answer 1 | ... | Answer N] //COMMENT, MUST BE AT START OR END OF LINE
+//Indices must be unique - they should not be changed if this document is modified. They can be in any order.
+// '_' answer means custom text input
+// '_'
+// '_+' answer means multiple custom inputs
+// '_#' answer means custom numerical input
+
+SECTION: Do you have:
+
+    0 Fever? [No | Mild (99-100.4) | (High 100.4+)] //Should we include units?
+
+    1 Cough? [No | Mild | Moderate | Severe]
+
+    2 Chest pain? [0-10] //Convert to 1-10 scale?
+
+    3 Trouble breathing? [No | Mild | Moderate | Severe]
+
+    4 Problems with your sense of smell or taste? [No | Yes]
+
+    5 Nasal congestion? [No | Mild | Moderate | Severe]
+
+    6 General feeling of malaise? [No | Yes]
+
+    7 Any gastrointestinal symptoms such as diarrhea, nausea, or vomiting [None | Diarrhead | Nausea | Vomiting]
+
+    8 Shortness of breath during your daily activities? [No | Yes]
+
+    9 A history of asthma or other upper respiratory problems [No | Asthma | _]
+
+
+
+10 What is your age? [_]
+
+11 Do you have chronic medical conditions?  [_+]
+
+12 Do you take medicines that lower your immune system such as steroids? [No | _+]
+
+13 Have you had any contact with persons who have tested positive for COVID-19? [No | Yes]
+
+14 Have you traveled in the last 14 days?  If so, where? [No | _+]
+
+15 Have you been tested for COVID-19?  What is the result of the test? [Not tested | Negative | Positive]
+
+
+
+Other Questions:
+
+16 What is your zip code? [_+]
+
+17 Do you smoke tobacco? [No | Former Smoker | 1 pack per year | 1 pack per month | 1 pack per day | Multiple packs per day]
+
+31 How often do you vape? [Never | Once a month | Once a week | Once a day | All day erreyday]
+
+32 How often do you vape marijuana? [Never | Once a month | Once a week | Once a day | All day erreyday] #Yeah I know people will lie here but we still might get some signal
+
+33 How often do you smoke marijuana? [Never | Once a month | Once a week | Once a day | All day erreyday]
+
+18 Do you have high blood pressure? [No | Yes]
+
+19 Do you have high cholesterol? [No | Yes]
+
+20 Do have allergies? [No | Mild | Moderate | Severe]
+
+21 How much alcohol do you drink? [None | Occasionally | Monthly | Weekly | Daily]
+
+22 How physically active are you (hours/month)? [_#]
+
+23 Has anyone in your family had cancer?  If so, what kind? [No | _]
+
+24 Are you on any other kind of medication? If so, what kind? [No | _]
+
+25 Do you have a history of depression or anxiety? [No | _]
+
+26 Have been diagnosed with any type of influenza previously? As a child or as an adult? [No | As a child | As an adult | Both]
+
+27 How often per year would you say you get an upper respiratory infection (a cold)? [_#]
+
+28 Are you or anyone else in your household a teacher? [No | Yes]
+
+29 Are you or anyone else in your household a health care professional?  If so, what kind? [No | _]
+
+30 Did you have any other illness at the time or just before the time when you began showing symptoms?  If so, what? [No | _]
