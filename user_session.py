@@ -1,8 +1,5 @@
 
 
-
-
-
 class UserSession:
     def __init__(self, id):
         self._id = id #Needs to be generated as a hash that stays constant per user. Researching.
