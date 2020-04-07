@@ -14,7 +14,7 @@ class Server(Flask):
 
     def _init(self):
         for k, v in self.GetMethodMap().items():
-            self.add_url_rule(k, handler=v)
+            self.add_url_rule(k, view_func=v)
 
     @property
     def c(self):
@@ -30,5 +30,5 @@ class Server(Flask):
         """Format:
             key=route(str), value=method"""
         return {
-            "/welcome":self.GET_HelloWorld()
+            "/welcome":self.GET_HelloWorld
         }

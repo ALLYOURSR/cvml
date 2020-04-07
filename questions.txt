@@ -8,7 +8,7 @@
 
 SECTION: Do you have:
 
-    0 Fever? [No | Mild (99-100.4) | (High 100.4+)] //Should we include units?
+    0 Fever? [No | Mild (99-100.4) | High (100.4+)] //Should we include units?
 
     1 Cough? [No | Mild | Moderate | Severe]
 
