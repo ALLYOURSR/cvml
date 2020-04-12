@@ -4,5 +4,7 @@ from server import Server
 
 c = ServerConfig()
 qg = QuestionGenerator(c.QuestionFilepath)
+qg.PrintAll()
+
 s = Server(c, qg)
 s.Run()

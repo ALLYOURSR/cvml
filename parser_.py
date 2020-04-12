@@ -9,12 +9,10 @@ class Parser:
         lines = f.readlines()
         f.close()
         questions = []
-
         for l in lines:
             if l.startswith('//') or l == "\n":
                 continue
 
 
-            questions.append(Question.FromReadLine(l))
-
+            questions.append(Question.ParseLine(l))
         return questions

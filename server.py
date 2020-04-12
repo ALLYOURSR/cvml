@@ -23,7 +23,7 @@ class Server(Flask):
     def Run(self):
         self.run(self.c.Host, self.c.Port)
 
-    def GET_HelloWorld(self):
+    def GET_HelloWorld(self, msg):
         return "Hello World"
 
     def GetMethodMap(self):

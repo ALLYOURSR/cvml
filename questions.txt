@@ -1,34 +1,32 @@
 //FORMAT
-//Question text INDEX [Answer 1 | ... | Answer N] //COMMENT, MUST BE AT START OR END OF LINE
-//Indices must be unique - they should not be changed if this document is modified. They can be in any order.
+//Question text ID [Answer 1 | ... | Answer N] //COMMENT, MUST BE AT START OR END OF LINE
+//Ids must be unique - they should not be changed if this document is modified. They can be in any order.
 // '_' answer means custom text input
 // '_'
 // '_+' answer means multiple custom inputs
 // '_#' answer means custom numerical input
 
-SECTION: Do you have:
+//SECTION: Do you have:
 
-    0 Fever? [No | Mild (99-100.4) | High (100.4+)] //Should we include units?
+0 Do you have a fever? [No | Mild (99-100.4) | High (100.4+)] //Should we include units?
 
-    1 Cough? [No | Mild | Moderate | Severe]
+1 Do you have a cough? [No | Mild | Moderate | Severe]
 
-    2 Chest pain? [0-10] //Convert to 1-10 scale?
+2 Are you experiencing chest pain? [0-10] //Convert to 1-10 scale?
 
-    3 Trouble breathing? [No | Mild | Moderate | Severe]
+3 Are you experiencing trouble breathing? [No | Mild | Moderate | Severe]
 
-    4 Problems with your sense of smell or taste? [No | Yes]
+4 Have you noticed problems with your sense of smell or taste? [No | Yes]
 
-    5 Nasal congestion? [No | Mild | Moderate | Severe]
+5 Do you have a nasal congestion? [No | Mild | Moderate | Severe]
 
-    6 General feeling of malaise? [No | Yes]
+6 Are you experiencing a general feeling of malaise? [No | Yes]
 
-    7 Any gastrointestinal symptoms such as diarrhea, nausea, or vomiting [None | Diarrhead | Nausea | Vomiting]
+7 Do you have any of the following symptons [None | Diarrhea | Nausea | Vomiting]
 
-    8 Shortness of breath during your daily activities? [No | Yes]
+8 Do you experience shortness of breath during your daily activities? [No | Yes]
 
-    9 A history of asthma or other upper respiratory problems [No | Asthma | _]
-
-
+9 Do you have a history of asthma or other upper respiratory problems [No | Asthma | _]
 
 10 What is your age? [_]
 
@@ -44,7 +42,7 @@ SECTION: Do you have:
 
 
 
-Other Questions:
+//Other Questions:
 
 16 What is your zip code? [_+]
 
