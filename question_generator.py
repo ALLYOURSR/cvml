@@ -1,7 +1,7 @@
 from parser_ import Parser
 
 class QuestionGenerator:
-    def __init__(self, question_filepath:str):
+    def __init__(self, user_session:UserSession, question_filepath:str):
         self._questions = []
         self._questionIndices = []
         self._init(question_filepath)

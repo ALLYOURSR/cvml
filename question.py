@@ -1,13 +1,14 @@
 from typing import List
 
 from answer import Answer, StringAnswer, RangeAnswer
+from serialization.utils import PackList
 
 
-class Question:
+class Question(dict):
     def __init__(self, text:str, id:int, answers:List[Answer]):
-        self._text = text
-        self._id = id
-        self._answers = answers
+        super(Question, self).__init__({"text": text,
+                                        "id": id,
+                                        "answers": PackList(answers)})
 
     @staticmethod
     def ParseLine(raw_line:str):
@@ -30,3 +31,6 @@ class Question:
                 answers.append(Answer.Parse(a.strip()))
 
         return Question(text, index, answers)
+
+    def _pack(self):
+        return self

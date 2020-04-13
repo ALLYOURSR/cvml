@@ -44,15 +44,15 @@
 
 //Other Questions:
 
-16 What is your zip code? [_+]
+16 What is your zip code? [_+ | Prefer not to say]
 
-17 Do you smoke tobacco? [No | Former Smoker | 1 pack per year | 1 pack per month | 1 pack per day | Multiple packs per day]
+17 Do you smoke tobacco? [Prefer not to say |No | Former Smoker | 1 pack per year | 1 pack per month | 1 pack per day | Multiple packs per day]
 
-31 How often do you vape? [Never | Once a month | Once a week | Once a day | All day erreyday]
+31 How often do you vape? [Prefer not to say |Never | Once a month | Once a week | Once a day | Multiple times a day]
 
-32 How often do you vape marijuana? [Never | Once a month | Once a week | Once a day | All day erreyday] #Yeah I know people will lie here but we still might get some signal
+32 How often do you vape marijuana? [Prefer not to say | Never | Once a month | Once a week | Once a day | Multiple times a day] #Yeah I know people will lie here but we still might get some signal
 
-33 How often do you smoke marijuana? [Never | Once a month | Once a week | Once a day | All day erreyday]
+33 How often do you smoke marijuana? [Prefer not to say | Never | Once a month | Once a week | Once a day | Multiple times a day]
 
 18 Do you have high blood pressure? [No | Yes]
 

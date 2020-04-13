@@ -2,14 +2,25 @@ from abc import abstractmethod
 from enum import Enum
 from typing import List
 
+class AnswerType(Enum):
+    StringAnswer = 0,
+    CustomAnswer = 1,
+    NumericalAnswer = 2,
+    RangeAnswer = 3,
+    MultiCustomAnswer = 4,
+    CustomNumericalAnswer = 5
 
-class Answer:
+
+
+class Answer(dict):
     def __init__(self, display_text):
-        self.DisplayText = display_text
+        super(Answer, self).__init__({
+            "display_text": display_text,
+            "answer_type": AnswerType[type(self).__name__], #Make sure each new answer type has a matching enum
+        })
 
-    def Pack(self):
-        raise NotImplementedError("Answer.Pack is an abstract class")
-        pass
+    def _pack(self):
+        return self
 
     @staticmethod
     def Parse(raw_text: str):
@@ -36,33 +47,35 @@ class Answer:
         elif a == '_+':
             return MultiCustomAnswer(a)
         elif a == '_#':
-            return CustumNumericalAnswer(a)
+            return CustomNumericalAnswer(a)
 
 class StringAnswer(Answer):
     def __init__(self, display_text:str):
         super(StringAnswer, self).__init__(display_text)
 
+
 class CustomAnswer(Answer):
     def __init__(self, display_text:str):
         super(CustomAnswer, self).__init__(display_text)
+
 
 class NumericalAnswer(Answer):
     def __init__(self, display_text:str):
         super(NumericalAnswer, self).__init__(display_text)
 
-
 class RangeAnswer(Answer):
     def __init__(self, text, min:int, max:int):
         super(RangeAnswer, self).__init__(text)
-        self.Min = min
-        self.Max = max
+        self["min"] = min
+        self["max"] = max
+
 
 
 class MultiCustomAnswer(Answer):
     def __init__(self, display_text:str):
         super(MultiCustomAnswer, self).__init__(display_text)
 
-class CustumNumericalAnswer(Answer):
+class CustomNumericalAnswer(Answer):
     def __init__(self, display_text:str):
-        super(CustumNumericalAnswer, self).__init__(display_text)
+        super(CustomNumericalAnswer, self).__init__(display_text)
 
